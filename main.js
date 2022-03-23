@@ -27,8 +27,20 @@ function weatherResult(weatherObject) {
     weather.textContent = 'Location not found';
     return
   }
-
+  /* Name of the Searched City with Country Code */
   var cityName = document.createElement('h2');
   cityName.textContent = weatherObject.name + ", " + weatherObject.sys.country;
   weather.appendChild(cityName);
+
+  /* Description of Current Weather */
+  var description = document.createElement('h3');
+  description.textContent = "Weather Description: " + weatherObject.weather.description;
+  weather.appendChild(description);
+
+  /* Icon Image for Current Weather Conditions */
+
+  /* Current Temperature */
+
+  /* Current "feels like" Temperature */
+
 }
