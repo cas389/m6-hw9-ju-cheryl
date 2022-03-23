@@ -38,11 +38,9 @@ function weatherResult(weatherObject) {
   weather.appendChild(description);
 
   /* Icon Image for Current Weather Conditions */
-  /*
-  var icon = document.createElement('img');
-  icon.textContent = weatherObject.weather[0].icon;
-  weather.appendChild(icon);  */
-
+  var pic = document.createElement('img')
+  pic.src = "weatherObject.weather.icon;"
+  weather.appendChild(pic)
 
 
   /* Current Temperature */

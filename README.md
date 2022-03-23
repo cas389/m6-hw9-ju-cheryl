@@ -6,6 +6,8 @@ I was having issues with my input part of my from disappearing after pressing th
 
 Another issue I am running into is my items are saying "undefined" on the website link after users put in a location.  I found a fix on the Stack Overflow link below.
 
+The last issue I ran into was displaying the icon for the weather.
+
 ## Outside Resources
 
 Help with "undefined" issue: https://stackoverflow.com/questions/41008123/openweather-api-getjson-request-returning-undefined
