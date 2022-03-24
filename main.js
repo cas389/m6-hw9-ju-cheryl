@@ -38,9 +38,41 @@ function weatherResult(weatherObject) {
   weather.appendChild(description);
 
   /* Icon Image for Current Weather Conditions */
-  var pic = document.createElement('img')
-  pic.src = "weatherObject.weather.icon;"
-  weather.appendChild(pic)
+  var img = document.createElement('img');
+
+  if (weatherObject.weather[0].description === "clear sky") {
+    img.src = "http://openweathermap.org/img/wn/01d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "few clouds") {
+    img.src = "http://openweathermap.org/img/wn/02d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "scattered clouds") {
+    img.src = "http://openweathermap.org/img/wn/03d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "overcast clouds") {
+    img.src = "http://openweathermap.org/img/wn/03d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "broken clouds") {
+    img.src = "http://openweathermap.org/img/wn/04d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "shower rain") {
+    img.src = "http://openweathermap.org/img/wn/09d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "rain") {
+    img.src = "http://openweathermap.org/img/wn/10d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "thunderstorm") {
+    img.src = "http://openweathermap.org/img/wn/11d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "snow") {
+    img.src = "http://openweathermap.org/img/wn/13d.png";
+    weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "mist") {
+    img.src = "http://openweathermap.org/img/wn/50d.png";
+    weather.appendChild(img);
+  } else {
+  console.log("No image available");
+  }
 
 
   /* Current Temperature */
