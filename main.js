@@ -23,10 +23,12 @@ form.onsubmit = function(functionEvent) {
 function weatherResult(weatherObject) {
   weather.innerHTML = "";
 
+  /* If Location Isn't Found */
   if (weatherObject.Response === 'False') {
     weather.textContent = 'Location not found';
     return
   }
+
   /* Name of the Searched City with Country Code */
   var cityName = document.createElement('h2');
   cityName.textContent = weatherObject.name + ", " + weatherObject.sys.country;
@@ -61,20 +63,17 @@ function weatherResult(weatherObject) {
   } else if (weatherObject.weather[0].description === "rain") {
     img.src = "http://openweathermap.org/img/wn/10d.png";
     weather.appendChild(img);
-  } else if (weatherObject.weather[0].description === "light rain") {
-    img.src = "http://openweathermap.org/img/wn/10d.png";
-    weather.appendChild(img);
   } else if (weatherObject.weather[0].description === "thunderstorm") {
     img.src = "http://openweathermap.org/img/wn/11d.png";
     weather.appendChild(img);
   } else if (weatherObject.weather[0].description === "snow") {
     img.src = "http://openweathermap.org/img/wn/13d.png";
     weather.appendChild(img);
-  } else if (weatherObject.weather[0].description === "mist") {
+  } else if (weatherObject.weather[0].description === "mist" || "smoke" || "Haze" || "sand/ dust whirls" || "fog" || "sand" || "dust" || "volcanic ash" || "squalls" || "tornado") {
     img.src = "http://openweathermap.org/img/wn/50d.png";
     weather.appendChild(img);
   } else {
-  console.log("No image available");
+    console.log("No image available");
   }
 
 
