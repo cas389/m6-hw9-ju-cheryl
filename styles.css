@@ -1,0 +1,92 @@
+/*===========================
+
+Fonts
+
+===========================*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+
+/*===========================
+
+Reset Rule
+
+===========================*/
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/*===========================
+
+Universal Styling
+
+===========================*/
+html {
+  background-image: linear-gradient(to bottom right, darkblue, lightblue);
+  height: 100%;
+  width: 100%;
+}
+
+/*===========================
+
+Text
+
+===========================*/
+
+header {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+}
+.container {
+  margin: 2rem auto;
+  width: 500px;
+  text-align: center;
+}
+#weather {
+  color: white;
+  padding: 1rem;
+}
+
+h2,
+h3 {
+  font-family: 'EB Garamond', serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+/*===========================
+
+Form
+
+===========================*/
+
+input {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: .75rem 1rem;
+  margin-top: 2rem;
+}
+button {
+  padding: .75rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}

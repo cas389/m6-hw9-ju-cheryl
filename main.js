@@ -61,6 +61,9 @@ function weatherResult(weatherObject) {
   } else if (weatherObject.weather[0].description === "rain") {
     img.src = "http://openweathermap.org/img/wn/10d.png";
     weather.appendChild(img);
+  } else if (weatherObject.weather[0].description === "light rain") {
+    img.src = "http://openweathermap.org/img/wn/10d.png";
+    weather.appendChild(img);
   } else if (weatherObject.weather[0].description === "thunderstorm") {
     img.src = "http://openweathermap.org/img/wn/11d.png";
     weather.appendChild(img);
@@ -76,13 +79,13 @@ function weatherResult(weatherObject) {
 
 
   /* Current Temperature */
-  var description = document.createElement('h3');
-  description.textContent = "Current Temperature: " + weatherObject.main.temp + " \xB0";
-  weather.appendChild(description);
+  var temperature = document.createElement('h3');
+  temperature.textContent = "Current: " + weatherObject.main.temp + " \xB0";
+  weather.appendChild(temperature);
 
   /* Current "feels like" Temperature */
-  var description = document.createElement('h3');
-  description.textContent = "Feels Like : " + weatherObject.main.feels_like + " \xB0";
-  weather.appendChild(description);
+  var feelsLike = document.createElement('h3');
+  feelsLike.textContent = "Feels Like : " + weatherObject.main.feels_like + " \xB0";
+  weather.appendChild(feelsLike);
 
 }
