@@ -6,7 +6,9 @@ I was having issues with my input part of my from disappearing after pressing th
 
 Another issue I am running into is my items are saying "undefined" on the website link after users put in a location.  I found a fix on the Stack Overflow link below.
 
-The last issue I ran into was displaying the icon for the weather. I finally came up with how to render the photos by using an if/ else if statement. I know this is probably not the correct way to do this, but at least I was able to get it working correctly.
+A third issue I ran into was displaying the icon for the weather. I finally came up with how to render the photos by using an if/ else if statement. I know this is probably not the correct way to do this, but at least I was able to get it working correctly. (I later received the correct code from the professor, but commented out my original thought process.)
+
+The last issue I had was the Location Not Found error code. I figured it out with the help of the teacher.
 
 ## Outside Resources
 

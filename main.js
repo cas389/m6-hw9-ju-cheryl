@@ -11,12 +11,15 @@ form.onsubmit = function(functionEvent) {
   .then(function(resultJson) {
       return resultJson.json();
   })
+
   .then(function(result){
     weatherResult(result)
     input.value = "";
   })
+
   .catch(function(error) {
     console.log(error);
+    document.getElementById('weather').innerHTML = "Location not found."
   })
 }
 
@@ -41,8 +44,11 @@ function weatherResult(weatherObject) {
 
   /* Icon Image for Current Weather Conditions */
   var img = document.createElement('img');
+  img.src = "http://openweathermap.org/img/wn/" + weatherObject.weather[0].icon + "@2x.png";
+  weather.appendChild(img)
 
-  if (weatherObject.weather[0].description === "clear sky") {
+  /*
+if (weatherObject.weather[0].description === "clear sky") {
     img.src = "http://openweathermap.org/img/wn/01d.png";
     weather.appendChild(img);
   } else if (weatherObject.weather[0].description === "few clouds") {
@@ -74,7 +80,9 @@ function weatherResult(weatherObject) {
     weather.appendChild(img);
   } else {
     console.log("No image available");
-  }
+  }*/
+
+
 
 
   /* Current Temperature */
